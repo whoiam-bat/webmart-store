@@ -1,0 +1,19 @@
+
+
+<===== Here are stored links to all resources that was used to resolve issues with developing of WebMart project =====>
+@author Oleksii Drabchak
+
+
+<=== Backend part ===>
+	1. Keep password and all secrets for DB connection securely in configuration file:
+		https://medium.com/@sun30nil/how-to-secure-secrets-and-passwords-in-springboot-90c952961d9
+	2. Database migration:
+		https://flywaydb.org/documentation/concepts/migrations.html
+		https://www.baeldung.com/database-migrations-with-flyway
+		https://www.youtube.com/watch?v=dJDBP7pPA-o&t=544s
+		https://www.youtube.com/watch?v=CJjHdchLY9Y&t=2038s
+	3. 
+
+
+
+ 
