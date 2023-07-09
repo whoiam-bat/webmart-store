@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/webmart
+    username: postgres
+    password: ENC(NLXU9iMqfJ6Ot7FqvEy8jA==)
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    locations: classpath:db.migration
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/webmart
+    user: postgres
+    password: ENC(NLXU9iMqfJ6Ot7FqvEy8jA==)
+    schemas: public
+    default-schema: public
+    baseline-on-migrate: true
+    clean-on-validation-error: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+jasypt:
+  encryptor:
+    password: ${ENCRYPTION_SECRET}
+    algorithm: ${ENCRYPTION_ALGORITHM}
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
