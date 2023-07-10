@@ -13,7 +13,6 @@ spring:
     schemas: public
     default-schema: public
     baseline-on-migrate: true
-    clean-on-validation-error: true
   jpa:
     hibernate:
       ddl-auto: update
