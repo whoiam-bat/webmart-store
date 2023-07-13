@@ -3,6 +3,8 @@ package ua.com.webmart.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "product_creator")
 @Getter
@@ -25,4 +27,8 @@ public class ProductCreator {
 
     @Column(name = "img_src")
     private String imgSrc;
+
+    @OneToMany(mappedBy = "creator")
+    @ToString.Exclude
+    private List<Product> products;
 }

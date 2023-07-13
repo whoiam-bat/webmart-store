@@ -31,9 +31,13 @@ public class ProductCategory {
     @JoinColumn(name = "parent_category")
     @Cascade(CascadeType.PERSIST)
     @ToString.Exclude
-    private ProductCategory category;
+    private ProductCategory parentCategory;
+
+    @OneToMany(mappedBy = "parentCategory")
+    @ToString.Exclude
+    private List<ProductCategory> subCategories;
 
     @OneToMany(mappedBy = "category")
     @ToString.Exclude
-    private List<ProductCategory> subCategories;
+    private List<Product> products;
 }
