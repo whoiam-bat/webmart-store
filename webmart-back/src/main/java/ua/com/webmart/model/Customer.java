@@ -2,8 +2,11 @@ package ua.com.webmart.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "customer")
@@ -42,5 +45,15 @@ public class Customer {
 
     @Column(name = "is_enabled")
     private boolean isEnabled;
+
+    @ManyToMany
+    @JoinTable(
+            name = "customer_authorities",
+            joinColumns = @JoinColumn(name = "customer_id"),
+            inverseJoinColumns = @JoinColumn(name = "authority_id")
+    )
+    @Cascade(CascadeType.PERSIST)
+    @ToString.Exclude
+    private List<Authority> authorities;
 
 }
