@@ -7,6 +7,7 @@ import org.hibernate.annotations.CascadeType;
 
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "product")
@@ -28,8 +29,8 @@ public class Product {
     @Column(name = "product_code")
     private String productCode;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "details", columnDefinition = "TEXT")
+    private String details;
 
     @Column(name = "date_created")
     private Date dateCreated;
@@ -53,5 +54,9 @@ public class Product {
     @JoinColumn(name = "creator")
     @Cascade(CascadeType.PERSIST)
     @ToString.Exclude
-    private  ProductCreator creator;
+    private ProductCreator creator;
+
+    @ManyToMany(mappedBy = "products")
+    @ToString.Exclude
+    private List<Purchase> purchases;
 }

@@ -56,4 +56,8 @@ public class Customer {
     @ToString.Exclude
     private List<Authority> authorities;
 
+    @OneToMany(mappedBy = "customer")
+    @ToString.Exclude
+    private List<Purchase> orders;
+
 }
