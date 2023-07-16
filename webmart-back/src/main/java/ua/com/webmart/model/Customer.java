@@ -1,5 +1,6 @@
 package ua.com.webmart.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Cascade;
@@ -54,10 +55,12 @@ public class Customer {
     )
     @Cascade(CascadeType.PERSIST)
     @ToString.Exclude
+    @JsonIgnore
     private List<Authority> authorities;
 
     @OneToMany(mappedBy = "customer")
     @ToString.Exclude
+    @JsonIgnore
     private List<Purchase> orders;
 
 }

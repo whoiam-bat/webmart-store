@@ -1,7 +1,9 @@
 package ua.com.webmart.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.Fetch;
 
 import java.util.List;
 
@@ -24,5 +26,6 @@ public class Authority {
 
     @ManyToMany(mappedBy = "authorities")
     @ToString.Exclude
+    @JsonIgnore
     private List<Customer> customers;
 }
