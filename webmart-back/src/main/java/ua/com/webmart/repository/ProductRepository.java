@@ -16,7 +16,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
             value = "SELECT product_id, product_name, product_code, category, creator, details, date_created, amount_on_stock, price, img_src " +
                     "FROM product " +
                     "LEFT JOIN product_category ON product.category = product_category.category_id " +
-                    "WHERE category_id = :categoryId OR parent_category = :categoryId",
+                    "WHERE category_id = :categoryId",
             nativeQuery = true
     )
     Page<Product> findAllByCategory(int categoryId, Pageable pageable);
