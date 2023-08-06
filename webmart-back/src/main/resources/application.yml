@@ -2,14 +2,14 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/webmart
     username: postgres
-    password: ENC(NLXU9iMqfJ6Ot7FqvEy8jA==)
+    password: ENC(8v+lEc0mmziy7U7yoAkbhQ==)
     driver-class-name: org.postgresql.Driver
   flyway:
     locations: classpath:db.migration
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/webmart
     user: postgres
-    password: ENC(NLXU9iMqfJ6Ot7FqvEy8jA==)
+    password: ENC(8v+lEc0mmziy7U7yoAkbhQ==)
     schemas: public
     default-schema: public
     baseline-on-migrate: true
