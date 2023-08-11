@@ -1,5 +1,6 @@
 package ua.com.webmart.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,5 +31,6 @@ public class ProductCreator {
 
     @OneToMany(mappedBy = "creator")
     @ToString.Exclude
+    @JsonIgnore
     private List<Product> products;
 }

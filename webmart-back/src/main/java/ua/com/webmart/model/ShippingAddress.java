@@ -1,6 +1,7 @@
 package ua.com.webmart.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -28,6 +29,7 @@ public class ShippingAddress {
 
     @OneToMany(mappedBy = "shippingAddress")
     @ToString.Exclude
+    @JsonIgnore
     private List<Purchase> purchases;
 
 }

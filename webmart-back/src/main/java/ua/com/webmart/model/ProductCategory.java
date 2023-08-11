@@ -1,5 +1,6 @@
 package ua.com.webmart.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Cascade;
@@ -35,9 +36,11 @@ public class ProductCategory {
 
     @OneToMany(mappedBy = "parentCategory")
     @ToString.Exclude
+    @JsonIgnore
     private List<ProductCategory> subCategories;
 
     @OneToMany(mappedBy = "category")
     @ToString.Exclude
+    @JsonIgnore
     private List<Product> products;
 }

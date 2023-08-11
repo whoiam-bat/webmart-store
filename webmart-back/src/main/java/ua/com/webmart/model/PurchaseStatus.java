@@ -1,5 +1,7 @@
 package ua.com.webmart.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,6 +26,7 @@ public class PurchaseStatus {
 
     @OneToMany(mappedBy = "purchaseStatus")
     @ToString.Exclude
+    @JsonIgnore
     private List<Purchase> purchases;
 
 }

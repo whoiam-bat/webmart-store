@@ -47,15 +47,14 @@ public class Customer {
     @Column(name = "is_enabled")
     private boolean isEnabled;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "customer_authorities",
             joinColumns = @JoinColumn(name = "customer_id"),
             inverseJoinColumns = @JoinColumn(name = "authority_id")
     )
-    @Cascade(CascadeType.PERSIST)
+    @Cascade({CascadeType.PERSIST})
     @ToString.Exclude
-    @JsonIgnore
     private List<Authority> authorities;
 
     @OneToMany(mappedBy = "customer")

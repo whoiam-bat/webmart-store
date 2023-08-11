@@ -1,5 +1,6 @@
 package ua.com.webmart.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Cascade;
@@ -58,5 +59,6 @@ public class Product {
 
     @ManyToMany(mappedBy = "products")
     @ToString.Exclude
+    @JsonIgnore
     private List<Purchase> purchases;
 }
