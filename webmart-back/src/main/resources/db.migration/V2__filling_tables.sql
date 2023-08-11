@@ -10,7 +10,7 @@ VALUES ('ROLE_OWNER'),
 /**
         Order status table
 **/
-INSERT INTO order_status (status_name)
+INSERT INTO purchase_status (status_name)
 VALUES ('Processing'),
        ('Packing'),
        ('On the way'),
@@ -33,15 +33,15 @@ VALUES ('Jewellery', NULL, 0),
        ('Cups', 2, 1),
        ('Mugs', 2, 1),
        ('Tablets & Laptops', 3, 1),
-       ('Tablets', 14, 2),
-       ('Laptops', 14, 2),
+       ('Tablets', 12, 2),
+       ('Laptops', 12, 2),
        ('Household electronics', 3, 1),
-       ('Dishwasher', 17, 2),
-       ('Blender', 17, 2),
-       ('Microwave', 17, 2),
-       ('Toaster', 17, 2),
-       ('Refrigerator', 17, 2),
-       ('Coffee maker', 17, 2), /*23*/
+       ('Dishwasher', 15, 2),
+       ('Blender', 15, 2),
+       ('Microwave', 15, 2),
+       ('Toaster', 15, 2),
+       ('Refrigerator', 15, 2),
+       ('Coffee maker', 15, 2),
        ('History', 4, 1),
        ('Fiction', 4, 1),
        ('True crime', 4, 1),
@@ -52,17 +52,28 @@ VALUES ('Jewellery', NULL, 0),
         Product creator table
 **/
 INSERT INTO product_creator (creator_name, email_address, img_src)
-VALUES ('Mybuzz', 'ccandish0@so-net.ne.jp', 'https://drive.google.com/file/d/1KHGmbBWMibJ_hEnEFa9Mli5xVyXfOmPZ/view?usp=drive_link'),
-       ('Agivu', 'kselvey1@bbb.org', 'https://drive.google.com/file/d/1MTSynat5yICIPNB719f9O-i5avxdpTVO/view?usp=drive_link'),
-       ('Fiveclub', 'sshearn2@cloudflare.com', 'https://drive.google.com/file/d/1WJMHGT-dbiT0jiR8K_pwkZ171tMaH4-L/view?usp=drive_link'),
-       ('Leenti', 'dwyllt3@jugem.jp', 'https://drive.google.com/file/d/1UxvLxYJ2KTUnppYeLFed63q-1pzv2ejT/view?usp=drive_link'),
-       ('BlogXS', 'cchristou4@123-reg.co.uk', 'https://drive.google.com/file/d/1zPAB-AhLdxdOvXOImqiJkp_QzkmZcPK2/view?usp=drive_link'),
-       ('Thoughtworks', 'rboolsen5@prweb.com', 'https://drive.google.com/file/d/16ccP_57NYMZv2lZRbQ2F5LzovlCyrxUn/view?usp=drive_link'),
-       ('Gevee', 'tgoom6@bandcamp.com', 'https://drive.google.com/file/d/1aJ316jpWdGzeuNhP-bIx0_FL0a9qYWkl/view?usp=drive_link'),
-       ('Art Spiegelman', 'aspiegelman@gmail.com', 'https://drive.google.com/file/d/1tbYfEiC1iT7J0NscwsGV5MqmbUB3X4f-/view?usp=drive_link'),
-       ('William L. Shirer', 'shirer@gmail.com', 'https://drive.google.com/file/d/1t0jRHAbecHQWK0YWCNhn9QqZfYnkS3qw/view?usp=drive_link'),
-       ('Eric Metaxas', 'metaxas@gmail.com', 'https://drive.google.com/file/d/1PfsS5niuSUDcC5hCIz8y5SWSh5A5CdvL/view?usp=drive_link'),
-       ('Doris Kearns Goodwin', 'doodwin@gmail.com', 'https://drive.google.com/file/d/1xDndGJSpT1MYPS0uV3g0fwLFHf-Unvr9/view?usp=drive_link');
+VALUES ('Mybuzz', 'ccandish0@so-net.ne.jp',
+        'https://drive.google.com/file/d/1KHGmbBWMibJ_hEnEFa9Mli5xVyXfOmPZ/view?usp=drive_link'),
+       ('Agivu', 'kselvey1@bbb.org',
+        'https://drive.google.com/file/d/1MTSynat5yICIPNB719f9O-i5avxdpTVO/view?usp=drive_link'),
+       ('Fiveclub', 'sshearn2@cloudflare.com',
+        'https://drive.google.com/file/d/1WJMHGT-dbiT0jiR8K_pwkZ171tMaH4-L/view?usp=drive_link'),
+       ('Leenti', 'dwyllt3@jugem.jp',
+        'https://drive.google.com/file/d/1UxvLxYJ2KTUnppYeLFed63q-1pzv2ejT/view?usp=drive_link'),
+       ('BlogXS', 'cchristou4@123-reg.co.uk',
+        'https://drive.google.com/file/d/1zPAB-AhLdxdOvXOImqiJkp_QzkmZcPK2/view?usp=drive_link'),
+       ('Thoughtworks', 'rboolsen5@prweb.com',
+        'https://drive.google.com/file/d/16ccP_57NYMZv2lZRbQ2F5LzovlCyrxUn/view?usp=drive_link'),
+       ('Gevee', 'tgoom6@bandcamp.com',
+        'https://drive.google.com/file/d/1aJ316jpWdGzeuNhP-bIx0_FL0a9qYWkl/view?usp=drive_link'),
+       ('Art Spiegelman', 'aspiegelman@gmail.com',
+        'https://drive.google.com/file/d/1tbYfEiC1iT7J0NscwsGV5MqmbUB3X4f-/view?usp=drive_link'),
+       ('William L. Shirer', 'shirer@gmail.com',
+        'https://drive.google.com/file/d/1t0jRHAbecHQWK0YWCNhn9QqZfYnkS3qw/view?usp=drive_link'),
+       ('Eric Metaxas', 'metaxas@gmail.com',
+        'https://drive.google.com/file/d/1PfsS5niuSUDcC5hCIz8y5SWSh5A5CdvL/view?usp=drive_link'),
+       ('Doris Kearns Goodwin', 'doodwin@gmail.com',
+        'https://drive.google.com/file/d/1xDndGJSpT1MYPS0uV3g0fwLFHf-Unvr9/view?usp=drive_link');
 
 
 /**
@@ -161,7 +172,7 @@ VALUES (18, 3),
 
 /* JEWELLERY */
 /* Rings with Mybuzz creator */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('Ring SAN MARINO', '18-777-4824', 5, 1,
         '18K white gold;\n18 diamonds 0.27 ct RW/VS- SI;\n1 tourmaline paraiba 1.58 ct SI;\nweight: 5.02g;\nsize: ~17.',
@@ -181,7 +192,7 @@ VALUES ('Ring SAN MARINO', '18-777-4824', 5, 1,
         'https://jurgagusaroviene.com/image/cache/catalog/Eshop%20foto/Rings/redaguota%20web%20sampaninis%20tiesinta-771x1000.jpg');
 
 /* Necklaces with Mybuzz creator */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('Necklace ROYAL PARAIBA', '03-402-1331', 7, 1,
         '18K white gold;\n1 Tourmaline Paraiba 1,42 ct;\n1 diamond 0,08 ct;\n32 diamonds 0,20 ct RW/VS;\nWeight: 2,14  g.',
@@ -197,7 +208,7 @@ VALUES ('Necklace ROYAL PARAIBA', '03-402-1331', 7, 1,
         'https://jurgagusaroviene.com/image/cache/catalog/Eshop%20foto/Collier/05%20DSC_9943%20px%201620-Edit%20copy-771x1000.jpg');
 
 /* Bracelets with Agivu creator */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('Bracelet GOLDEN CUBE with sapphire, silver', '15-890-3124', 6, 2,
         'silver with 14k Yellow Gold detail;\n1 sapphire (round) ~0.06 ct VS;\nwrist size ~16cm.\nweight 12,87 g.',
@@ -209,7 +220,7 @@ VALUES ('Bracelet GOLDEN CUBE with sapphire, silver', '15-890-3124', 6, 2,
         'https://jurgagusaroviene.com/image/cache/catalog/Eshop%20foto/Bracelet%20of%20Nica%20su%20C-771x1000.jpg');
 
 /* Earrings with Agivu creator */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('Earrings HOOPS', '97-556-4276', 8, 2,
         '14K Yellow Gold;\nEarring diameter 17 mm;\nWeight 8g.',
@@ -232,7 +243,7 @@ VALUES ('Earrings HOOPS', '97-556-4276', 8, 2,
 /* ELECTRONICS */
 
 /* Tablets*/
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('Apple iPad 10.2" 2021 Wi-Fi 64 GB Space Gray', '62-154-8884', 15, 3,
         'Screen 10.2" IPS (2160x1620) MultiTouch / Apple A13 Bionic (2.65 GHz) / 64 GB of internal memory / Wi-Fi / Bluetooth 4.2 / main camera 8 megapixels, front camera 12 megapixels / iPadOS 15 / 487 g / gray space',
@@ -248,7 +259,7 @@ VALUES ('Apple iPad 10.2" 2021 Wi-Fi 64 GB Space Gray', '62-154-8884', 15, 3,
         '2020-03-14', 770, 285.00, 'https://content.rozetka.com.ua/goods/images/big/333739402.jpg');
 
 /* Laptops */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('Acer Aspire 7 Charcoal Black', '74-429-0236', 16, 4,
         'Screen 15.6" IPS (1920x1080) Full HD, matte / AMD Ryzen 5 5500U (2.1 - 4.0 GHz) / RAM 8 GB / SSD 512 GB / nVidia GeForce GTX 1650, 4 GB / without OD / LAN / Wi-Fi / Bluetooth / webcam / without OS / 2.15 kg / black',
@@ -264,7 +275,7 @@ VALUES ('Acer Aspire 7 Charcoal Black', '74-429-0236', 16, 4,
         '2022-02-28', 78, 850.00, 'https://content1.rozetka.com.ua/goods/images/big/302686477.jpg');
 
 /* Dishwashers */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('HOTPOINT ARISTON HSFO 3T235 WC X', '82-300-6718', 18, 5,
         'Capacity of sets: 10\nWater consumption per cycle/year: 9/2520l\nElectricity consumption per cycle/year: 0.66/189 kWh\nInstallation method: Separate (solo)\nEnergy consumption class: A+++\nDimensions (HxWxD): 85 x 45 x 59 cm\nRecess dimensions (HxWxD): 86-89 x 45-50 x 59 cm\nSink class: A\nDrying class: A',
@@ -280,7 +291,7 @@ VALUES ('HOTPOINT ARISTON HSFO 3T235 WC X', '82-300-6718', 18, 5,
         '2021-02-07', 214, 850.00, 'https://content1.rozetka.com.ua/goods/images/big/238009802.jpg');
 
 /* Blender */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('TEFAL HB656838', '93-067-9640', 19, 5,
         'Power, W: 1000\nGlass capacity: 800 ml\nType: Submersible\nBlender leg material: metal\nDimensions (HxWxD): 40 x 7 x 7 cm',
@@ -296,7 +307,7 @@ VALUES ('TEFAL HB656838', '93-067-9640', 19, 5,
         '2022-12-03', 873, 75.00, 'https://content2.rozetka.com.ua/goods/images/big/180843282.jpg');
 
 /* Microwave */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('SAMSUNG GE81MRTB', '22-111-5671', 20, 5,
         'Type of control: Mechanical\nInstallation method: Separate\nColor: Stainless steel\nType: With grill\nMicrowave power: 800 W',
@@ -312,7 +323,7 @@ VALUES ('SAMSUNG GE81MRTB', '22-111-5671', 20, 5,
         '2022-10-09', 482, 90.00, 'https://content.rozetka.com.ua/goods/images/big/45760143.jpg');
 
 /* Toaster */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('PHILIPS Daily Collection', '39-206-1068', 21, 6,
         'Number of frying modes: 8\nColor: White\nBody material: Plastic\nNumber of compartments: 2',
@@ -328,7 +339,7 @@ VALUES ('PHILIPS Daily Collection', '39-206-1068', 21, 6,
         '2021-08-15', 829, 65.00, 'https://content1.rozetka.com.ua/goods/images/big/49011388.jpg');
 
 /* Refrigerator */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('BEKO RCNA406I35XB', '83-072-2679', 22, 6,
         'Total volume of the refrigerator: 388l\nRefrigerator type: Two-chamber\nEnergy consumption class: A++\nRefrigerator defrosting system: No Frost (dry)\nDimensions (HxWxD): 202.5 x 59.5 x 67 cm',
@@ -344,7 +355,7 @@ VALUES ('BEKO RCNA406I35XB', '83-072-2679', 22, 6,
         '2021-03-23', 193, 495.00, 'https://content.rozetka.com.ua/goods/images/big/303935121.jpg');
 
 /* Coffee maker */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('KRUPS Essential EA816570', '15-781-3099', 23, 6,
         'Type: Coffee machine\nType of coffee: Grain\nControls: Button control\nPreparation of cappuccino: Automatic',
@@ -363,7 +374,7 @@ VALUES ('KRUPS Essential EA816570', '15-781-3099', 23, 6,
 /* CROCKERY */
 
 /* Plates */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('Luminarc Diwali Light Turquoise', '33-751-8008', 9, 7,
         'Luminarc Diwali Light Turquoise Dining set, 18 pieces (P2963).\nNumber of persons: 6.\nMaterial: glass.\nA complete set of the service:\n\tTurquoise dinner plate 6 pcs.\n\tDeep white plate 6 pcs. (20 cm)\n\tDessert plate turquoise 6 pcs. (19 cm)',
@@ -379,7 +390,7 @@ VALUES ('Luminarc Diwali Light Turquoise', '33-751-8008', 9, 7,
         '2022-05-11', 641, 115.00, 'https://content.rozetka.com.ua/goods/images/big/195708174.jpg');
 
 /* Cups */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('La Cucina 350 ml Green', '01-464-8429', 10, 7,
         'The La Cucina ceramic mug will keep your drinks hot for a long time and allow you to fully enjoy their rich taste and aroma.\nLa Cucina is a modern brand that offers kitchenware, including kitchen utensils and food storage containers.',
@@ -396,7 +407,7 @@ The Mariposa porcelain tableware series is an original, exquisite product that c
         '2021-07-01', 736, 9.55, 'https://content1.rozetka.com.ua/goods/images/big/11703577.jpg');
 
 /* Mugs */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('Lefard Cats 400 ml', '95-598-4738', 11, 7,
         'Lefard is one of the largest porcelain manufacturers in the world. Ceramic and porcelain products (dinner and tea sets, serving items, interior items and souvenirs) perfectly combine aesthetics and practicality and are in high demand among connoisseurs of quality tableware.\nLefard tableware sets, interior items and souvenirs in elegant packaging are a great gift for amateurs and collectors. All products are strictly certified and do not contain any harmful substances.',
@@ -415,7 +426,7 @@ VALUES ('Lefard Cats 400 ml', '95-598-4738', 11, 7,
 /* BOOKS */
 
 /* History */
-INSERT INTO product(product_name, product_code, category, creator, description, date_created, amount_on_stock, price,
+INSERT INTO product(product_name, product_code, category, creator, details, date_created, amount_on_stock, price,
                     img_src)
 VALUES ('Maus I: A Survivor''s Tale: My Father Bleeds History', '11-177-9955', 24, 8,
         'The bestselling first installment of the graphic novel acclaimed as "the most affecting and successful narrative ever done about the Holocaust" (Wall Street Journal) and "the first masterpiece in comic book history" (The New Yorker) - PULITZER PRIZE WINNER - One of Variety''s "Banned and Challenged Books Everyone Should Read" A brutally moving work of art--widely hailed as the greatest graphic novel ever written--Maus recounts the chilling experiences of the author''s father during the Holocaust, with Jews drawn as wide-eyed mice and Nazis as menacing cats. Maus is a haunting tale within a tale, weaving the author''s account of his tortured relationship with his aging father into an astonishing retelling of one of history''s most unspeakable tragedies. It is an unforgettable story of survival and a disarming look at the legacy of trauma.\n',
